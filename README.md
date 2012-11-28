@@ -1,3 +1,13 @@
+## Part 2
+Part 2 adds fetching remote data and rendering it into the UI.  The following is shown:
+
+* Accessing Flickr feed API via native API to bypass same domain security restrictions
+* Callback function to iterate through returned images and render them into the UI
+
+The key areas of the code to look at are:
+
+* In photos.js the definition of fetchData, handleFetchSuccess and renderPhotoThumbnail functions
+
 ## Overview
 
 This is a simple, sample app showing the beginnings of a hybrid application for iOS and Android.  It demonstrates the following:
