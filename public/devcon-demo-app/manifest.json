@@ -1,0 +1,24 @@
+{
+    "name": "devcon-demo-app",
+    "description": "Please provide a description for this template.",
+    "version": "1.0",
+    "devices": [
+        "iPhone",
+        "Android"
+    ],
+    "platformConfig": {
+        "android": {
+            "nativeNavigation": true
+        },
+        "iOS": {
+            "nativeNavigation": true
+        }
+    },
+    "views": [
+        {
+            "navigationTitle": "photos",
+            "navigationIcon": "images/icons/photos.png",
+            "uri": "./html/photos.html"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="bc-manifest" content="../manifest.json" />
+
+    <title>Photos</title>
+
+    <!-- some default styles provided by the app cloud framework -->
+    <link rel="stylesheet" href="../stylesheets/brightcove-app-cloud-1.12.min.css" />
+    <!-- CSS specific to this view -->
+    <link rel="stylesheet" href="../stylesheets/photos.css" />
+
+    <!-- App Cloud JS SDK.  Provided access to native capabilities of device -->
+    <script type="text/javascript" src="../javascripts/lib/brightcove-app-cloud-1.12.min.js"></script>
+    <!-- JS that is specific to this photo view -->
+    <script type="text/javascript" src="../javascripts/views/photos.js"></script>
+
+    <!-- add in underscore microframework to support for nice iterations/function over arrays of objects -->
+    <script type="text/javascript" src="../javascripts/lib/underscore.js"></script>    
+    <!-- add in overthrow.js to enable scrolling of our thumbnail content area -->
+    <script type="text/javascript" src="../javascripts/lib/overthrow.js"></script>
+    <!-- hammer.js to support our double tap and drag guesture -->
+    <script type="text/javascript" src="../javascripts/lib/hammer.js"></script>
+    <script type="text/javascript" src="../javascripts/lib/jquery.hammer.js"></script>    
+
+  </head>
+  <body>
+
+    <div class="page">
+      <header class="fixed-header-container">
+        <div class='addBtn'>+</div>
+        Photos
+      </header>
+      
+      <!-- This is the main content area of the page.  It will hold all of the thumbnails and enable scrolling of content. -->
+      <section class="photocontainer overthrow">
+        <!-- The javascripts/views/photo.js file will trigger fetching images from flickr and populate into this ul. -->
+        <ul class='photolist'>
+        </ul>
+      </section>
+    </div>
+    
+  </body>
+</html>
