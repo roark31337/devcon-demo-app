@@ -1,21 +1,4 @@
-(function($) {
-  
-  //Some static data.  In a real app this would most likely be fetched from the App Cloud server and stored via bc.core.cache.
-  var _data = {
-    items: [
-      {
-        "title": "List item number one.",
-        "description": "Description for the first list item.",
-        imageURL: "../images/cat-crying.gif"        
-      },
-      {
-        "title": "List item number two.",
-        "description": "Description for the second list item.",
-        imageURL: "../images/cat-crying.gif"
-      }
-    ]
-  }
-  
+(function($) {  
 
   $(document).ready( function() {
     var scale = 1;
@@ -40,20 +23,8 @@
      * in a desktop environment.
      */
     function registerEventListeners() {
-      $('.addBtn').on('tap', function() {
-        bc.device.takePhoto(handleTakePhotoSuccess);
-      });
     }
-
-    /**
-     * Called by the container upon successfully taking a picture.  The photoPath is the path to the image on disk.  Because
-     * we are running in a native environment and the files are loaded from the local domain we are able to access this image.
-     */
-    function handleTakePhotoSuccess(photoPath) {
-      var html = "<li class='thumbContainer'><img src='" + photoPath + "'/></li>";
-      $('.photolist').prepend(html);
-    }
-
+    
     /**
      * We can not use the built-in AJAX functionality of the browser/jquery because it violates the same domain security model.
      * Instead, we use a JavaScript API exposed by the container which does the HTTP calls for us through native code.  This 
@@ -95,7 +66,7 @@
           previousScale = scale;
           previousRotation = rotation;
         }
-        
+
         ev.preventDefault();
       });
     }
