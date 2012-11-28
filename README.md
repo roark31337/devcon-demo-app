@@ -1,3 +1,15 @@
+## Part 3
+Part 3 adds in gesture support and scolling.  Specifically, the following gestures are recognized:
+
+* Double tap on an image to go fullscreen
+* Pinch/zoom/rotate an image to manipulate it
+* Ability to scroll through list of images
+
+The key areas of the code to look at are:
+
+* The addition of several microframeworks (overthrow and hammer) in the photos.html file
+* The definition of the registerImageEventListeners function and the associated event handlers
+
 ## Overview
 
 This is a simple, sample app showing the beginnings of a hybrid application for iOS and Android.  It demonstrates the following:
