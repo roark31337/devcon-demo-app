@@ -1,11 +1,6 @@
 (function($) {  
 
   $(document).ready( function() {
-    var scale = 1;
-    var previousScale = 1;
-    var rotation = 0;
-    var previousRotation = 0;
-
     init();
 
     /**
@@ -24,7 +19,7 @@
      */
     function registerEventListeners() {
     }
-    
+
     /**
      * We can not use the built-in AJAX functionality of the browser/jquery because it violates the same domain security model.
      * Instead, we use a JavaScript API exposed by the container which does the HTTP calls for us through native code.  This 
@@ -51,24 +46,6 @@
      * of event and will go fullscreen upon doubletap and rotate/skew the image upon a transform. 
      */
     function registerImageEventListeners() {
-      $(".thumbContainer img").hammer({}).bind("doubletap transform transformstart transformend", function(ev) {
-
-        if (ev.type == 'doubletap') {
-          $(ev.target).toggleClass('fullscreen');
-        }
-        else if (ev.type == 'transform') {
-          scale = previousScale * ev.scale;
-          rotation = previousRotation + ev.rotation;
-          var cssTransform = "scale("+ previousScale * ev.scale  +") rotate(" + rotation + "deg)";
-          $(ev.target).css('-webkit-transform', cssTransform);          
-        }
-        else if (ev.type == 'transformend') {
-          previousScale = scale;
-          previousRotation = rotation;
-        }
-
-        ev.preventDefault();
-      });
     }
 
     /**
