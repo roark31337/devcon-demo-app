@@ -1,21 +1,4 @@
-(function($) {
-  
-  //Some static data.  In a real app this would most likely be fetched from the App Cloud server and stored via bc.core.cache.
-  var _data = {
-    items: [
-      {
-        "title": "List item number one.",
-        "description": "Description for the first list item.",
-        imageURL: "../images/cat-crying.gif"        
-      },
-      {
-        "title": "List item number two.",
-        "description": "Description for the second list item.",
-        imageURL: "../images/cat-crying.gif"
-      }
-    ]
-  }
-  
+(function($) {  
 
   $(document).ready( function() {
     var scale = 1;
